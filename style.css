@@ -1,0 +1,163 @@
+/* Estilos generales */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* MOBILE FIRST */
+header {
+  padding: 0 2em;
+  background-color: #d4a373;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fefae0;
+  padding: 10px;
+}
+
+.menu {
+  display: none;
+  background-color: #d4a373;
+  color: #fefae0;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+.menu li {
+  padding: 10px;
+  border-top: 1px solid #fefae0;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle:checked + .menu {
+  display: block;
+}
+
+.img-container {
+  background-color: #ccd5ae;
+  color: white;
+  padding-bottom: 1em;
+}
+
+.img-paragraph {
+  margin: 0;
+  padding: 0 1em;
+  text-align: center;
+}
+
+.article-container {
+  background-color: #fefae0;
+  padding: 1em;
+}
+
+.article-container article {
+  margin: 1em 0;
+  padding: 0.3em 1em;
+  border: 2px solid #d4a373;
+  border-radius: 0.5em;
+}
+
+.article-container article h2 {
+  text-align: center;
+  color: #d4a373;
+}
+
+.article-container article p {
+  font-size: 1em;
+}
+
+footer {
+  background-color: #ccd5ae;
+  margin: 0;
+  padding: 2em 1em;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d4a373;
+    padding: 0 2em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    border-top: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    width: auto;
+  }
+
+  .article-container {
+    padding: 3em 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .article-container article {
+    margin: 0;
+  }
+
+  .article-container article:nth-child(3) {
+    grid-column: span 2;
+  }
+}
+
+/* Estilos para pc */
+@media only screen and (min-width: 1030px) {
+  body {
+    background-color: lightgray;
+  }
+
+  .article-container {
+    display: flex;
+    flex-direction: row;
+    gap: unset;
+  }
+
+  .article-container article {
+    margin: 1em;
+  }
+}
